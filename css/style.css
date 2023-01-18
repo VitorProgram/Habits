@@ -23,11 +23,9 @@
     /* Espaçamento Interno */
     padding: 1rem 1.5rem;
 
-    /* Bordas */
     border-radius: 0.5rem;
     border: 1px solid #8b5cf6;
 
-    /* Fundo Transparente */
     background-color: transparent;
 
     /* Posicionamento */
@@ -35,7 +33,6 @@
     align-items: center;
     gap: 0.75rem;
 
-    /* Fonte */
     font-family: 'inter', Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 1rem;
@@ -45,14 +42,34 @@
   /* Área de conteúdo principal */
   form {
     display: flex;
+
+    padding: 0 3rem;
+  }
+
+  .habits {
+    margin-top: 3.6rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+  }
+
+  .habit {
+    width: 4rem;
+    height: 4rem;
+
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   /* Área de "calendário" */
   form .days {
     display: flex;
     gap: 3rem;
-
-    /* Espaçamento horizontal entre os dias individuais */
     margin-left: 2rem;
   }
 
@@ -60,7 +77,6 @@
  .days .day {
     display: flex;
 
-    /* Espaçamento entre os inputs */
     gap: 1.5rem;
     flex-direction: column;
   }
@@ -79,7 +95,6 @@
 
   /* Configurações de input de seleção / checkbox */
   input {
-    /**/
     appearance: none;
     -webkit-appearance: none;
 
