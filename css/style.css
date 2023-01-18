@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  color: #fff;
   list-style: none;
 }
 
@@ -26,9 +27,8 @@
     border-radius: 0.5rem;
     border: 1px solid #8b5cf6;
 
-    /* Fundo Transparente e ajustando cor interna */
+    /* Fundo Transparente */
     background-color: transparent;
-    color: #fff;
 
     /* Posicionamento */
     display: flex;
@@ -41,3 +41,63 @@
     font-size: 1rem;
     line-height: 125%;
   }
+
+  /* Área de conteúdo principal */
+  form {
+    display: flex;
+  }
+
+  /* Área de "calendário" */
+  form .days {
+    display: flex;
+    gap: 3rem;
+
+    /* Espaçamento horizontal entre os dias individuais */
+    margin-left: 2rem;
+  }
+
+  /* Área de dias individualmente */
+ .days .day {
+    display: flex;
+
+    /* Espaçamento entre os inputs */
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  /* Div que informa a data */
+  .day div {
+    margin-bottom: 0.5rem;
+
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #A1A1AA;
+  }
+
+  /* Configurações de input de seleção / checkbox */
+  input {
+    /**/
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 4rem;
+    height: 4rem;
+
+    border: 2px solid #27272a;
+    border-radius: 0.5rem;
+
+    background-color: #18181b;
+  }
+
+  /* Pseudo-Selector
+  
+    Vai dizer que: quando estiver selecionado, tenha estas propiedades
+  */
+  input:checked {
+    background-color: #8B5CF6;
+    border: 2px solid #A78BFA;
+  }
+
