@@ -14,8 +14,12 @@ body {
 header {
   display: flex;
   align-items: center;
+  position: fixed;
+  width: 100%;
+
   justify-content: space-between;
   padding: 3rem;
+  background-color: #09090a;
 }
 
 button {
@@ -45,15 +49,15 @@ button:hover {
 }
 
 /* Área de conteúdo principal */
-form {
+#form-habits{
   display: flex;
-
-  padding: 0 3rem;
+  width: fit-content;
+  padding: 12rem 3rem 3rem;
 }
 
 /* Div de Hábitos */
 .habits {
-  margin-top: 3.6rem;
+  margin-top: 4.2rem;
 
   display: flex;
   flex-direction: column;
@@ -75,11 +79,11 @@ form {
   transition: scale 0.4s ease;
 }
 .habit:hover {
-  scale: 1.06;
+  scale: 1.08;
 }
 
 /* Área de "calendário" */
-form .days {
+#form-habits .days {
   display: flex;
   gap: 3rem;
   margin-left: 2rem;
@@ -98,34 +102,11 @@ form .days {
   padding-bottom: 10px;
   margin-bottom: 0.5rem;
 
-  position: relative;
-
   font-family: "Roboto Mono";
   font-weight: 700;
   font-size: 20px;
 
   color: #a1a1aa;
-}
-
-/* Adicionando linha que aparecerá abaixo do elemento */
-.day div::after {
-  content: " ";
-
-  width: 0%;
-  height: 4px;
-  border-radius: 10px;
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  transition: all 0.5s ease-in-out;
-  background-color: #202038;
-}
-
-/* Configurando o aparecimento */
-.day div:hover::after {
-  width: 100%;
 }
 
 /* Configurações de input de seleção / checkbox */
