@@ -3,116 +3,156 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: #fff;
   list-style: none;
 }
 
-  body {
-    background-color: #09090A;
-    height: 100vh;
-  }
+body {
+  background-color: #09090a;
+  height: 100vh;
+}
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3rem;
-  }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+}
 
-  button {
-    /* Espaçamento Interno */
-    padding: 1rem 1.5rem;
+button {
+  /* Espaçamento Interno */
+  padding: 1rem 1.5rem;
 
-    border-radius: 0.5rem;
-    border: 1px solid #8b5cf6;
+  border-radius: 0.5rem;
+  border: 1px solid #8b5cf6;
 
-    background-color: transparent;
+  background-color: transparent;
 
-    /* Posicionamento */
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+  /* Posicionamento */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 
-    font-family: 'inter', Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 125%;
-  }
+  font-family: "inter", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 125%;
+  color: #FFF;
 
-  /* Área de conteúdo principal */
-  form {
-    display: flex;
+  transition: all 1s;
+}
+button:hover {
+  background-color: #000000;
+}
 
-    padding: 0 3rem;
-  }
+/* Área de conteúdo principal */
+form {
+  display: flex;
 
-  .habits {
-    margin-top: 3.6rem;
+  padding: 0 3rem;
+}
 
-    display: flex;
-    flex-direction: column;
+/* Div de Hábitos */
+.habits {
+  margin-top: 3.6rem;
 
-    gap: 1.5rem;
-  }
+  display: flex;
+  flex-direction: column;
 
-  .habit {
-    width: 4rem;
-    height: 4rem;
+  gap: 1.5rem;
+}
 
-    font-size: 2rem;
+/* Divs de icon de hábitos individual */
+.habit {
+  width: 4rem;
+  height: 4rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+  font-size: 2rem;
 
-  /* Área de "calendário" */
-  form .days {
-    display: flex;
-    gap: 3rem;
-    margin-left: 2rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-  /* Área de dias individualmente */
- .days .day {
-    display: flex;
+  transition: scale 0.4s ease;
+}
+.habit:hover {
+  scale: 1.06;
+}
 
-    gap: 1.5rem;
-    flex-direction: column;
-  }
+/* Área de "calendário" */
+form .days {
+  display: flex;
+  gap: 3rem;
+  margin-left: 2rem;
+}
 
-  /* Div que informa a data */
-  .day div {
-    margin-bottom: 0.5rem;
+/* Área de dias individualmente */
+.days .day {
+  display: flex;
 
-    font-family: 'Roboto Mono';
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 125%;
+  gap: 1.5rem;
+  flex-direction: column;
+}
 
-    color: #A1A1AA;
-  }
+/* Div que informa a data */
+.day div {
+  padding-bottom: 10px;
+  margin-bottom: 0.5rem;
 
-  /* Configurações de input de seleção / checkbox */
-  input {
-    appearance: none;
-    -webkit-appearance: none;
+  position: relative;
 
-    width: 4rem;
-    height: 4rem;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  font-size: 20px;
 
-    border: 2px solid #27272a;
-    border-radius: 0.5rem;
+  color: #a1a1aa;
+}
 
-    background-color: #18181b;
-  }
+/* Adicionando linha que aparecerá abaixo do elemento */
+.day div::after {
+  content: " ";
 
-  /* Pseudo-Selector
+  width: 0%;
+  height: 4px;
+  border-radius: 10px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transition: all 0.5s ease-in-out;
+  background-color: #202038;
+}
+
+/* Configurando o aparecimento */
+.day div:hover::after {
+  width: 100%;
+}
+
+/* Configurações de input de seleção / checkbox */
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 4rem;
+  height: 4rem;
+
+  border: 2px solid #27272a;
+  border-radius: 0.5rem;
+
+  background-color: #18181b;
+
+  transition: background-color 0.4s ease;
+}
+
+/* Pseudo-Selector
   
     Vai dizer que: quando estiver selecionado, tenha estas propiedades
   */
-  input:checked {
-    background-color: #8B5CF6;
-    border: 2px solid #A78BFA;
-  }
+input:checked {
+  background-color: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
 
+input:hover {
+  background-color: rgba(171, 146, 230, 0.3);
+}
