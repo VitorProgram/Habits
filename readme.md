@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Habits é um app para ajudar a rastrear e organizar seus hábitos e sua rotina.
 
-- [Acesse o projeto finalizado, online](https://maykbrito.github.io/devlinks)
+- [Acesse o projeto finalizado, online](https://VitorProgram.github.io/Habits)
 
 - [Comece a usar agora mesmo o app!](https://habits-sage.vercel.app/)
 
